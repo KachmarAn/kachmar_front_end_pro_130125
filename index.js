@@ -1,7 +1,13 @@
-console.log ('Hello world!');
-console.log ('Hello world!');
-console.log ('Hello world!');
-console.log ('Hello world!');
-console.log ('Hello world!');
-console.log ('Hello world!');
-console.log ('Hello world!');
+// Запросити у користувача кількість годин
+let hours = prompt("Введіть кількість годин:");
+
+// Перевірити, чи введено число
+if (!isNaN(hours) && hours > 0) {
+    // Порахувати кількість секунд у цій кількості годин
+    let seconds = hours * 3600;
+
+    // Вивести результат користувачу в alert
+    alert(`У ${hours} годинах міститься ${seconds} секунд.`);
+} else {
+    alert("Будь ласка, введіть коректне число годин.");
+}
