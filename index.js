@@ -1,3 +1,5 @@
-let hours = prompt("Введіть кількість годин:");
-let seconds = hours * 3600;
-alert(`У ${hours} годинах міститься ${seconds} секунд.`);
+// Запитуємо ім'я користувача
+const userName = prompt("What is your name?");
+
+// Виводимо привітання
+alert(`Hello, ${userName}! How are you?`);
