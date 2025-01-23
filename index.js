@@ -35,14 +35,14 @@ const average = (num5 + num6 + num7) / 3;
 alert(`The average of the three numbers is: ${average}`);
 
 
-// Запитуємо у користувача п'ятизначне число
-const number = parseInt(prompt("Enter a five-digit number:"));
-// Перевіряємо, чи введене число дійсно п'ятизначне
-if (number >= 10000 && number <= 99999) {
-    const digit1 = Math.floor(number / 10000);          // Перша цифра
-    const digit2 = Math.floor((number % 10000) / 1000); // Друга цифра
-    const digit3 = Math.floor((number % 1000) / 100);   // Третя цифра
-    const digit4 = Math.floor((number % 100) / 10);     // Четверта цифра
-    const digit5 = number % 10;                        // П'ята цифра
-    alert(`Digits: ${digit1} ${digit2} ${digit3} ${digit4} ${digit5}`);
-} 
+// Введіть п'ятизначне число
+let number = parseInt(prompt("Введіть п'ятизначне число:"));
+
+// Отримуємо цифри
+let digit1 = number / 10000 - (number / 10000) % 1;
+let digit2 = (number % 10000) / 1000 - ((number % 10000) / 1000) % 1;
+let digit3 = (number % 1000) / 100 - ((number % 1000) / 100) % 1;
+let digit4 = (number % 100) / 10 - ((number % 100) / 10) % 1;
+let digit5 = number % 10;
+
+alert(`Digits: ${digit1} ${digit2} ${digit3} ${digit4} ${digit5}`);
