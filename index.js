@@ -1,11 +1,11 @@
 // Запитуємо рік народження
-let birthYear = prompt("Введіть ваш рік народження:");
-if (birthYear === null) {
+let Year = prompt("Введіть ваш рік народження:");
+if (Year === null) {
   alert("Шкода, що Ви не захотіли ввести свій рік народження.");
 } else {
   // Обчислюємо вік
   const currentYear = new Date().getFullYear();
-  const age = currentYear - parseInt(birthYear);
+  const age = currentYear - parseInt(Year);
 
   // Запитуємо місто проживання
   let city = prompt("В якому місті Ви живете?");
